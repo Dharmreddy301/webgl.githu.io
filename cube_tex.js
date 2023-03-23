@@ -178,9 +178,15 @@ const model= mat4.create();
 const mvMatrix = mat4.create();
 const mvpMatrix = mat4.create();
 
-function render() {
+const fpsElem = document.querySelector("#fps");
+var then =0;
+function render(time) {
     requestAnimationFrame(render);
-   
+    time *= 0.001;
+    var deltaTime = time - then;
+    then = time;
+    const fps = 1 / deltaTime;    
+    fpsElem.textContent = fps.toFixed(1);
     mat4.rotateX(model, model, Math.PI/60);
     mat4.rotateY(model, model, Math.PI/160);
     
@@ -191,4 +197,4 @@ function render() {
     
   }
   
-render();
+requestAnimationFrame(render);
