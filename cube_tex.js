@@ -197,4 +197,4 @@ function render(time) {
     
   }
   
-requestAnimationFrame(render);
+render();
