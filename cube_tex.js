@@ -186,7 +186,7 @@ function render(time) {
     var deltaTime = time - then;
     then = time;
     const fps = 1 / deltaTime;    
-    fpsElem.textContent = fps.toFixed(1);
+    //fpsElem.textContent = fps.toFixed(1);
     mat4.rotateX(model, model, Math.PI/60);
     mat4.rotateY(model, model, Math.PI/160);
     
