@@ -178,7 +178,7 @@ const model= mat4.create();
 const mvMatrix = mat4.create();
 const mvpMatrix = mat4.create();
 
-//const fpsElem = document.querySelector("#fps");
+const fpsElem = document.querySelector("#fps");
 var then =0;
 function render(time) {
     requestAnimationFrame(render);
